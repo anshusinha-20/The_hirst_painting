@@ -10,18 +10,28 @@ tim.shape("turtle")
 """tim color is set to blue"""
 tim.color("blue")
 
-"""function to create a square"""
-def timMakeSquare():
-    tim.forward(100)
-    tim.right(90)
-    tim.forward(100)
-    tim.right(90)
-    tim.forward(100)
-    tim.right(90)
-    tim.forward(100)
+# """function to create a square"""
+# def timMakeSquare():
+#     tim.forward(100)
+#     tim.right(90)
+#     tim.forward(100)
+#     tim.right(90)
+#     tim.forward(100)
+#     tim.right(90)
+#     tim.forward(100)
+#
+# """function is called"""
+# timMakeSquare()
 
-"""function is called"""
-timMakeSquare()
+"""function to create a dashed line"""
+def timDashedLine():
+    tim.pendown()
+    tim.forward(10)
+    tim.penup()
+    tim.forward(10)
+
+for i in range(10):
+    timDashedLine()
 
 """screen object is created"""
 screen = Screen()
