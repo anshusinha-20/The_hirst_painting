@@ -56,34 +56,52 @@ screen.setup(1000, 800)
 #         timMakePolygon(360/i, color)
 #     count += 1
 
-"""create a random walk"""
-# tim's configurations
-# turtle.setworldcoordinates(-450, -350, 450, 350)
-turtle.colormode(255)
-tim.shape("turtle")
-tim.speed("fastest")
-tim.pensize(20)
+# """create a random walk"""
+# # tim's configurations
+# # turtle.setworldcoordinates(-450, -350, 450, 350)
+# turtle.colormode(255)
+# tim.shape("turtle")
+# tim.speed("fastest")
+# tim.pensize(20)
+#
+# directions = [0, 90, 180, 270]
+# pensizes = [10, 15, 20, 25, 20]
+# distances = [20, 25, 30, 35, 40]
+# # colors = ["#19381F", "#EEE82C", "#91CB3E", "#53A548", "#C8AB83", "#F7BFB4", "#9CBFA7",
+# #           "#71697A", "#BF4E30", "#FFD9DA", "#B5DFCA", "#FCFAFA", "#FFD166", "#FF47DA",
+# #           "#3DD6D0", "#881600", "#F08A4B", "#011936", "#F7F052", "#050401"]
+# def generateColor():
+#     red = random.randint(0, 255)
+#     green = random.randint(0, 255)
+#     blue = random.randint(0, 255)
+#     color = (red, green, blue)
+#     return color
+#
+# for i in range(200):
+#     tim.color(generateColor())
+#     tim.setheading(random.choice(directions))
+#     tim.pensize(random.choice(pensizes))
+#     tim.forward(random.choice(distances))
+#
+# tim.hideturtle()
 
-directions = [0, 90, 180, 270]
-pensizes = [10, 15, 20, 25, 20]
-distances = [20, 25, 30, 35, 40]
-# colors = ["#19381F", "#EEE82C", "#91CB3E", "#53A548", "#C8AB83", "#F7BFB4", "#9CBFA7",
-#           "#71697A", "#BF4E30", "#FFD9DA", "#B5DFCA", "#FCFAFA", "#FFD166", "#FF47DA",
-#           "#3DD6D0", "#881600", "#F08A4B", "#011936", "#F7F052", "#050401"]
-def generateColor():
-    red = random.randint(0, 255)
-    green = random.randint(0, 255)
-    blue = random.randint(0, 255)
-    color = (red, green, blue)
-    return color
-
-for i in range(200):
-    tim.color(generateColor())
-    tim.setheading(random.choice(directions))
-    tim.pensize(random.choice(pensizes))
-    tim.forward(random.choice(distances))
-
-tim.hideturtle()
+# """draw a spirograph"""
+# # tim's configurations
+# turtle.colormode(255)
+# tim.speed("fastest")
+# def generateRandomColor():
+#     red = random.randint(0, 255)
+#     blue = random.randint(0, 255)
+#     green = random.randint(0, 255)
+#     color = (red, green, blue)
+#     return color
+#
+# for i in range(180):
+#     tim.color(generateRandomColor())
+#     tim.circle(100)
+#     tim.setheading(tim.heading() + 2)
+#
+# tim.hideturtle()
 
 
 """screen will be exited upon a click"""
