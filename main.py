@@ -7,28 +7,37 @@ from turtle import Turtle, Screen
 """random module is imported"""
 import random
 
+##### default configurations #####
+
 """tim object is created"""
 tim = Turtle()
-"""a turtle shape is provided """
+"""a turtle shape is provided"""
 tim.shape("turtle")
+"""speed is set for the turtle object"""
+tim.speed("fastest")
 
 """screen object is created"""
 screen = Screen()
 """sets the screen setup"""
 screen.setup(1000, 800)
 
-# """function to create a square"""
-# def timMakeSquare():
-#     tim.forward(100)
-#     tim.right(90)
-#     tim.forward(100)
-#     tim.right(90)
-#     tim.forward(100)
-#     tim.right(90)
-#     tim.forward(100)
-#
-# """function is called"""
-# timMakeSquare()
+##### ----- #####
+
+##### ----- #####
+
+"""function to create a square"""
+def timMakeSquare(x, y):
+    for i in range(4):
+        tim.forward(100)
+        tim.right(90)
+    tim.hideturtle()
+    screen.exitonclick()
+
+"""function will be called on screen click"""
+screen.onscreenclick(timMakeSquare, 1)
+turtle.mainloop()
+
+##### ----- #####
 
 # """function to create a dashed line"""
 # def timDashedLine():
@@ -151,5 +160,5 @@ screen.setup(1000, 800)
 #
 # tim.hideturtle()
 
-"""screen will be exited upon a click"""
-screen.exitonclick()
+# """screen will be exited upon a click"""
+# screen.exitonclick()
