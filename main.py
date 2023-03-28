@@ -25,29 +25,37 @@ screen.setup(1000, 800)
 
 ##### ----- #####
 
-"""function to create a square"""
-def timMakeSquare(x, y):
-    for i in range(4):
-        tim.forward(100)
-        tim.right(90)
-    tim.hideturtle()
-    screen.exitonclick()
-
-"""function will be called on screen click"""
-screen.onscreenclick(timMakeSquare, 1)
-turtle.mainloop()
+# """function to create a square"""
+# def timMakeSquare(x, y):
+#     for i in range(4):
+#         tim.forward(100)
+#         tim.right(90)
+#     tim.hideturtle()
+#     screen.exitonclick()
+#
+# """function will be called on screen click"""
+# screen.onscreenclick(timMakeSquare, 1)
+# turtle.mainloop()
 
 ##### ----- #####
 
-# """function to create a dashed line"""
-# def timDashedLine():
-#     tim.pendown()
-#     tim.forward(10)
-#     tim.penup()
-#     tim.forward(10)
-#
-# for i in range(10):
-#     timDashedLine()
+##### ----- #####
+
+"""function to create a dashed line"""
+def timDashedLine(x, y):
+    for i in range(10):
+        tim.pendown()
+        tim.forward(10)
+        tim.penup()
+        tim.forward(10)
+    tim.hideturtle()
+    screen.exitonclick()
+
+"""function called on screen click"""
+screen.onscreenclick(timDashedLine, 1)
+turtle.mainloop()
+
+##### ----- #####
 
 # """function to create different sizes i.e from triangle to decagon"""
 # def timMakePolygon(angle, color):
@@ -159,6 +167,3 @@ turtle.mainloop()
 #         tim.setheading(0)
 #
 # tim.hideturtle()
-
-# """screen will be exited upon a click"""
-# screen.exitonclick()
